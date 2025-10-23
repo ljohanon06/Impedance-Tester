@@ -1,11 +1,8 @@
-idf_component_register(SRCS "main.c"
-                    INCLUDE_DIRS "."
-                    REQUIRES fatfs
-                    REQUIRES esp_driver_sdspi
-                    REQUIRES esp_driver_gpio
-                    REQUIRES esp_driver_dac
-                    REQUIRES esp_driver_i2c
-                    REQUIRES oledDisplay
-                    REQUIRES esp_driver_gptimer
-                    REQUIRES esp_adc)
-set(EXTRA_COMPONENT_DIRS components)
+# For more information about build system see
+# https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html
+# The following five lines of boilerplate have to be in your project's
+# CMakeLists in this exact order for cmake to work correctly
+cmake_minimum_required(VERSION 3.5)
+
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(impedanceTester)

@@ -1,0 +1,11 @@
+idf_component_register(SRCS "main.c"
+                    INCLUDE_DIRS "."
+                    REQUIRES fatfs
+                    REQUIRES esp_driver_sdspi
+                    REQUIRES esp_driver_gpio
+                    REQUIRES esp_driver_dac
+                    REQUIRES esp_driver_i2c
+                    REQUIRES oledDisplay
+                    REQUIRES esp_driver_gptimer
+                    REQUIRES esp_adc)
+set(EXTRA_COMPONENT_DIRS components)
